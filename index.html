@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Student bonafide certificate request portal demo.">
+  <title>Student Bonafide Portal</title>
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Bonafide Portal home">
+      <span class="brand-mark">B</span>
+      <span>Bonafide<span class="brand-light">Portal</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#apply">New request</a>
+      <a href="#track">Track status</a>
+      <a href="#review">Demo review</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero page-width" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> STUDENT SERVICES PORTAL</p>
+        <h1>Your bonafide certificate,<br><span>made simpler.</span></h1>
+        <p class="hero-description">A simple place to prepare a certificate request and learn how the application process works.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#apply">Start a request <span aria-hidden="true">→</span></a>
+          <a class="button button-secondary" href="#track">Track an application</a>
+        </div>
+        <div class="trust-row"><span>✓ Easy-to-follow form</span><span>✓ Clear process</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="ring ring-one"></div>
+        <div class="ring ring-two"></div>
+        <article class="certificate-preview">
+          <div class="preview-heading"><span class="seal">✦</span><div><b>YOUR COLLEGE NAME</b><small>Student Services Office</small></div></div>
+          <div class="preview-rule"></div>
+          <h2>BONAFIDE CERTIFICATE</h2>
+          <div class="preview-line"></div>
+          <div class="preview-line"></div>
+          <div class="preview-line short"></div>
+          <div class="preview-signature">Authorized Signatory</div>
+        </article>
+        <div class="floating-note"><span class="check-icon">✓</span><span><b>Student portal</b><small>Request information in one place</small></span></div>
+      </div>
+    </section>
+
+    <section class="process-section page-width" aria-labelledby="process-title">
+      <div class="section-heading">
+        <p class="eyebrow">HOW IT WORKS</p>
+        <h2 id="process-title">Three steps. Less paperwork.</h2>
+        <p>Understand the usual process for requesting your certificate.</p>
+      </div>
+      <div class="steps-grid">
+        <article class="step-card"><span class="step-number blue">01</span><h3>Enter your details</h3><p>Prepare your student information and the reason for your request.</p></article>
+        <article class="step-card"><span class="step-number violet">02</span><h3>College review</h3><p>Submit your details to your college office for verification and approval.</p></article>
+        <article class="step-card"><span class="step-number green">03</span><h3>Receive your certificate</h3><p>Follow your college's instructions to collect or download the approved certificate.</p></article>
+      </div>
+    </section>
+
+    <section class="workspace page-width" aria-label="Request and tracking forms">
+      <div class="form-column" id="apply">
+        <div class="section-heading left-heading">
+          <p class="eyebrow">STUDENT SERVICES</p>
+          <h2>Bonafide request form</h2>
+          <p>Fill in the details you would provide to your college.</p>
+        </div>
+        <form class="panel" id="request-form">
+          <div class="field-grid">
+            <div class="field full">
+              <label for="student-name">Full name <span>*</span></label>
+              <input id="student-name" name="student_name" autocomplete="name" placeholder="Name as per college records" required>
+            </div>
+            <div class="field">
+              <label for="register-number">Register number <span>*</span></label>
+              <input id="register-number" name="register_number" placeholder="e.g. 23CSE001" required>
+            </div>
+            <div class="field">
+              <label for="email">Email address <span>*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+            </div>
+            <div class="field">
+              <label for="department">Department <span>*</span></label>
+              <select id="department" name="department" required>
+                <option value="">Select department</option>
+                <option>Computer Science and Engineering (CSE)</option>
+                <option>Information Technology (IT)</option>
+                <option>Artificial Intelligence and Data Science (AI &amp; DS)</option>
+                <option>Artificial Intelligence and Machine Learning (AI &amp; ML)</option>
+                <option>Electronics and Communication Engineering (ECE)</option>
+                <option>Electrical and Electronics Engineering (EEE)</option>
+                <option>Mechanical Engineering</option>
+                <option>Civil Engineering</option>
+                <option>Automobile Engineering</option>
+                <option>Biomedical Engineering</option>
+                <option>Chemical Engineering</option>
+                <option>Mechatronics Engineering</option>
+                <option>Other Engineering Department</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="year">Year of study <span>*</span></label>
+              <select id="year" name="year_of_study" required>
+                <option value="">Select year</option>
+                <option>1st Year</option><option>2nd Year</option><option>3rd Year</option><option>4th Year</option><option>Other</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="purpose">Purpose of certificate <span>*</span></label>
+              <select id="purpose" name="purpose" required>
+                <option value="">Choose purpose</option>
+                <option>Scholarship application</option><option>Bank account opening</option>
+                <option>Passport application</option><option>Education loan</option>
+                <option>Internship</option><option>Travel concession</option><option>Other</option>
+              </select>
+            </div>
+          </div>
+          <button class="button button-primary submit-button" type="submit">Submit request <span aria-hidden="true">→</span></button>
+          <p class="form-note">Demo only: requests are saved in this browser, not sent to your college.</p>
+          <div class="form-feedback" id="request-feedback" role="status" aria-live="polite" hidden></div>
+        </form>
+      </div>
+
+      <aside class="track-card" id="track">
+        <p class="eyebrow">APPLICATION UPDATES</p>
+        <h2>Track your request</h2>
+        <p>Use the application code and email provided by your college portal.</p>
+        <form id="track-form">
+          <div class="field">
+            <label for="application-code">Application code</label>
+            <input id="application-code" name="application_code" placeholder="e.g. BNF-A1B2C3D4" required>
+          </div>
+          <div class="field">
+            <label for="track-email">Email address</label>
+            <input id="track-email" name="track_email" type="email" placeholder="you@example.com" required>
+          </div>
+          <button class="button button-primary submit-button" type="submit">Check status <span aria-hidden="true">→</span></button>
+          <div class="form-feedback" id="track-feedback" role="status" aria-live="polite" hidden></div>
+        </form>
+        <p class="form-note">Use the same browser where you submitted the demo request.</p>
+      </aside>
+    </section>
+
+    <section class="review-section page-width" id="review">
+      <div class="section-heading left-heading">
+        <p class="eyebrow">FRONT-END DEMO</p>
+        <h2>Review requests</h2>
+        <p>Demo controls to try changing a request status. This is not a secure admin area.</p>
+      </div>
+      <div class="review-list" id="review-list" aria-live="polite"></div>
+    </section>
+
+    <section class="certificate-section page-width" id="certificate-area" aria-live="polite" hidden>
+      <div class="certificate-toolbar">
+        <p>Your request is approved. You can print or save this demo certificate as a PDF.</p>
+        <button class="button button-primary" id="print-certificate" type="button">Print / Save as PDF</button>
+      </div>
+      <article class="certificate">
+        <header class="certificate-header">
+          <div class="certificate-seal" aria-hidden="true">✦</div>
+          <div><h2>YOUR COLLEGE NAME</h2><p>Student Services Office</p><p>College Address · City</p></div>
+        </header>
+        <div class="certificate-rule"></div>
+        <h1>BONAFIDE CERTIFICATE</h1>
+        <p class="certificate-reference">Certificate reference: <b id="certificate-code"></b></p>
+        <p class="certificate-body">This is to certify that <b id="certificate-name"></b>, Register Number <b id="certificate-register"></b>, is a bonafide student of this institution, studying in <b id="certificate-year"></b> in the Department of <b id="certificate-department"></b>.</p>
+        <p class="certificate-body">This certificate is issued upon the student's request for the purpose of <b id="certificate-purpose"></b>.</p>
+        <div class="certificate-bottom">
+          <p>Date: <b id="certificate-date"></b></p>
+          <div class="certificate-signature"><span></span><b>Authorized Signatory</b><small>College Seal</small></div>
+        </div>
+        <p class="certificate-disclaimer">DEMO TEMPLATE — This is not an official certificate. Replace sample college details and follow your institution's approval process.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Student Bonafide Management System</span>
+    <span>Browser-only demo · No backend</span>
+  </footer>
+  <script src="../static/script.js" defer></script>
+</body>
+</html>
